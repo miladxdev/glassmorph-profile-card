@@ -26,24 +26,31 @@ function following() {
     // Animation
     let id = setInterval (animate, 200);
     let i = 0;
+
     function animate() {
+
         if (i  > media.length-1) {
             clearInterval(id);
             media[media.length-1].style.background = color1;
-            console.log("delete");
+            console.log("Interval deleted");
         }
-        media[i].style.background = color2;
-        if (i > 0) {
-            media[i-1].style.background = color1;
-        }
-        i++;
-        console.log(i);
-    }
 
+        if (i > 0 && i < media.length) {
+            media[i].style.background = color2;
+            media[i-1].style.background = color1; 
+        }
+
+        i++;
+    }
 }
 
-// show/hide notification
+// show-hide notification
+let active = false;
+
 menuBtn.addEventListener("click", function() {
+
+    active = !active;
+    if (!active) { notif.innerHTML = ''; }
     
     if (notif.style.opacity != 1) {
         notif.style.top = 0;
