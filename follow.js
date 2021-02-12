@@ -1,7 +1,10 @@
+// getting DOM elements
 let media = document.querySelectorAll(".media");
 let followBtn = document.getElementById("follow");
 let menuBtn = document.getElementById("right");
 let notif = document.getElementById("notif");
+let container = document.getElementById("container");
+let msgBtn = document.getElementById("msg-btn");
 
 const color1 = "rgba(255, 255, 255, 0.1)";
 const color2 = "rgba(255, 255, 255, 0.3)";
@@ -35,10 +38,9 @@ function following() {
             console.log("Interval deleted");
         }
 
-        if (i > 0 && i < media.length) {
-            media[i].style.background = color2;
-            media[i-1].style.background = color1; 
-        }
+        if (i < media.length) media[i].style.background = color2;
+
+        if (i > 0) media[i-1].style.background = color1; 
 
         i++;
     }
@@ -59,4 +61,15 @@ menuBtn.addEventListener("click", function() {
         notif.style.top = "-200px";
         notif.style.opacity = "0";
     }
+});
+
+// show-hide message box
+msgBtn.addEventListener("click", function() {
+    active = !active;
+    if (active) {
+        container.style.bottom = "20px";
+    } else {
+        container.style.bottom = "-160px";
+    }
+    
 });

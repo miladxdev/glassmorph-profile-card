@@ -15,14 +15,12 @@ body {
     align-items: center;
 }
 
-.card > div {
-    margin-top: 15px;
-}
+
 .card {
     position: relative;
     background-color: rgba(255, 255, 255, 0.1);
     width: 400px;
-    padding: 30px;
+    height: 660px;
     border-radius: 40px;
     font-family: "@microsoft YaHei Ui Light";
     color: white;
@@ -30,39 +28,25 @@ body {
     overflow: hidden;
     z-index: 0;
 }
-
-/* .card {
-    background: linear-gradient(158deg, #96deff38, #ff90de3a);
-    background-size: 400% 400%;
-
-    -webkit-animation: AnimationName 20s ease infinite;
-    -moz-animation: AnimationName 20s ease infinite;
-    animation: AnimationName 20s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 4%}
-    50%{background-position:100% 97%}
-    100%{background-position:0% 4%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 4%}
-    50%{background-position:100% 97%}
-    100%{background-position:0% 4%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 4%}
-    50%{background-position:100% 97%}
-    100%{background-position:0% 4%}
+/* #container:hover {
+    bottom: 20px;
 } */
 
+#container {
+    position: absolute;
+    right: 30px; left: 30px;
+    bottom: -160px;
+    transition: 0.5s;
 
-
+}
+#container > div {
+    margin-top: 15px;
+}
 
 
 .menu {
     position: absolute;
-    left:5%; right: 5%; top: 6px;
+    left:-10px; right: -10px; top: -10px;
     padding: 10px;
     font-size: 28px;
     z-index: 1;
@@ -144,7 +128,7 @@ div#name {
     display: flex;
     justify-content: space-between;
 }
-.buttons button {
+.buttons button, #send-btn {
     border: none;
     border-radius: 10px;
     outline: none;
@@ -181,6 +165,25 @@ div#name {
     background: rgba(255, 255, 255, 0.2)!important;
 }
 
+
+#msg-input {
+    width: 100%; height: 100px;
+    border: none; outline: none;
+    resize: none;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 30px; padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 18px;
+    vertical-align: top;
+}
+#send-btn {
+    float: right;
+    width: 50px; height: 50px;
+    font-size: 14px;
+    margin-top: 5px;
+}
 
 .notification {
     position: absolute;
