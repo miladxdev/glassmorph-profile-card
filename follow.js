@@ -5,6 +5,8 @@ let menuBtn = document.getElementById("right");
 let notif = document.getElementById("notif");
 let container = document.getElementById("container");
 let msgBtn = document.getElementById("msg-btn");
+let msgInput = document.getElementById("msg-input");
+let sendBtn = document.getElementById("send-btn");
 
 const color1 = "rgba(255, 255, 255, 0.1)";
 const color2 = "rgba(255, 255, 255, 0.3)";
@@ -72,4 +74,18 @@ msgBtn.addEventListener("click", function() {
         container.style.bottom = "-160px";
     }
     
+});
+
+// send Message
+sendBtn.addEventListener("click", function() {
+    msgInput.value = '';
+    setTimeout(function() {
+        container.style.bottom = "-160px";
+        // push notification
+        let para = document.createElement("p");
+        let node = document.createTextNode("your message been send");
+        para.appendChild(node);
+        notif.appendChild(para);
+
+    }, 1000);
 });
