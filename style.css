@@ -70,14 +70,14 @@ body {
 
 .profile {
     margin: auto;
-    width: 230px;
-    height: 230px;
+    width: 210px;
+    height: 210px;
     border-radius: 50%;
     overflow: hidden;
 }
 .profile img {
     width: 100%;
-    opacity: .7;
+    opacity: .6;
     cursor: pointer;
     transition: 2s;
 }
