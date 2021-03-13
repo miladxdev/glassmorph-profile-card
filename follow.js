@@ -24,7 +24,7 @@ function following() {
     }
     // create notification node
     let para = document.createElement("p");
-    let node = document.createTextNode("you are following @vanessa.kirby");
+    let node = document.createTextNode("you are following @Kimia");
     para.appendChild(node);
     notif.appendChild(para);
 
@@ -70,8 +70,10 @@ msgBtn.addEventListener("click", function() {
     active = !active;
     if (active) {
         container.style.bottom = "20px";
+        this.style.border = "2px dotted white";
     } else {
         container.style.bottom = "-160px";
+        this.style.border = "none";
     }
     
 });
