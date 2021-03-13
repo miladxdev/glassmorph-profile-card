@@ -9,7 +9,7 @@ let msgInput = document.getElementById("msg-input");
 let sendBtn = document.getElementById("send-btn");
 
 const color1 = "rgba(255, 255, 255, 0.1)";
-const color2 = "rgba(255, 255, 255, 0.3)";
+const color2 = "rgba(255, 255, 255, 0.4)";
 
 followBtn.addEventListener("click", following);
 
@@ -21,6 +21,7 @@ function following() {
     } else {
         followBtn.innerHTML = "Follow";
         followBtn.style.background = color1;
+       
     }
     // create notification node
     let para = document.createElement("p");
@@ -70,10 +71,10 @@ msgBtn.addEventListener("click", function() {
     active = !active;
     if (active) {
         container.style.bottom = "20px";
-        this.style.border = "2px dotted white";
+        this.style.background = color2;
     } else {
         container.style.bottom = "-160px";
-        this.style.border = "none";
+        this.style.background = color1;
     }
     
 });
